@@ -54,7 +54,7 @@ const isAuthenticated = async (req, res) => {
     const result = await userService.isAuthenticated(token);
     return res.status(200).json({
       success: true,
-      data: response,
+      data: result,
       message: 'user is authenticated and token is valid',
       err: {},
     });
