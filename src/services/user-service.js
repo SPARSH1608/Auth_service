@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 const { JWT_KEY } = require('../config/serverConfig');
 const bcrypt = require('bcrypt');
 const AppErrors = require('../utils/error-handler.js');
+const ClientError = require('../utils/client-error.js');
 class UserService {
   constructor() {
     this.userRepository = new UserRepository();
@@ -80,6 +81,9 @@ class UserService {
         return newJWT;
       }
     } catch (error) {
+      if (error.name == 'AttributeNotFound') {
+        throw error;
+      }
       console.log('Something went wrong while sign in process', error);
       throw error;
     }

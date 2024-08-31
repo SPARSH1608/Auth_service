@@ -38,12 +38,13 @@ const signIn = async (req, res) => {
       err: {},
     });
   } catch (error) {
-    console.log(error);
-    res.status(500).json({
-      message: 'Something went wrong ',
+    // console.log(error);
+
+    res.status(error.statusCode).json({
+      message: error.message,
       data: {},
       success: false,
-      err: error,
+      err: error.explanation,
     });
   }
 };
