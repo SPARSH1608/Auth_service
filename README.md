@@ -39,3 +39,13 @@ GET /isAdmin: Check if the authenticated user has admin privileges.
 Password Encryption: Handled using bcrypt with a salt stored in the environment variables.
 
 Token-Based Authentication: JWT tokens are used for session management and are sent in the headers as Bearer tokens.
+
+# Other Services Links
+
+[FlightSearchService](https://github.com/SPARSH1608/flightandSearchService)
+
+[AirTicketBookingService](https://github.com/SPARSH1608/AirTicketBookingService)
+
+[AuthService](https://github.com/SPARSH1608/Auth_service)
+
+[ReminderService](https://github.com/SPARSH1608/ReminderService)
